@@ -1,0 +1,45 @@
+﻿<Window x:Class="LogisticApp.Views.AddTruckWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Truck" Height="450" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Truck Model -->
+        <TextBlock Text="Model" VerticalAlignment="Center" Margin="5"/>
+        <TextBox Grid.Row="0" Margin="100,5,10,5" Text="{Binding NewTruck.Model}"/>
+
+        <!-- KM -->
+        <TextBlock Text="Kilometers" Grid.Row="1" VerticalAlignment="Center" Margin="5"/>
+        <TextBox Grid.Row="1" Margin="100,5,10,5" Text="{Binding NewTruck.KM}"/>
+
+        <!-- Driver -->
+        <TextBlock Text="Driver" Grid.Row="2" VerticalAlignment="Center" Margin="5"/>
+        <TextBox Grid.Row="2" Margin="100,5,10,5" Text="{Binding NewTruck.Driver}"/>
+
+     
+
+        <!-- License Photo Upload -->
+        <TextBlock Text="License Photo" Grid.Row="4" VerticalAlignment="Center" Margin="5"/>
+        <Button Content="Upload License Photo" Grid.Row="4" Margin="100,5,10,5" Click="UploadLicensePhoto_Click"/>
+
+        <!-- Photo Upload -->
+        <TextBlock Text="Truck Photo" Grid.Row="5" VerticalAlignment="Center" Margin="5"/>
+        <Button Content="Upload Truck Photo" Grid.Row="5" Margin="100,5,10,5" Click="UploadTruckPhoto_Click"/>
+
+        <!-- Save Button -->
+        <Button Content="Save" Grid.Row="6" Margin="10" Height="30" Width="100"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Click="SaveButton_Click"/>
+    </Grid>
+</Window>

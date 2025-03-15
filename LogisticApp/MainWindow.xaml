@@ -1,12 +1,19 @@
 ﻿<Window x:Class="LogisticApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:LogisticApp"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Main Window" Height="350" Width="525">
     <Grid>
+        <!-- Main container to stack content vertically -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
 
+            <!-- Large "Logistic App" text -->
+            <TextBlock Text="Logistic App" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <!-- Buttons for navigating to other views -->
+            <Button Content="Trailer View" Width="200" Height="40" Margin="0,0,0,20" Click="TrailerViewButton_Click"/>
+            <Button Content="Truck View" Width="200" Height="40" Margin="0,0,0,20" Click="TruckViewButton_Click"/>
+            
+            
+        </StackPanel>
     </Grid>
 </Window>
