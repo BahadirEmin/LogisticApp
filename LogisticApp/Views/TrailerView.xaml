@@ -1,9 +1,16 @@
-<Window x:Class="LogisticsCRM.Views.TruckView"
+<Window x:Class="LogisticsCRM.Views.TrailerView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Truck Records" Height="350" Width="525">
+        Title="Trailer Records" Height="450" Width="800">
     <Grid>
-        <ListBox ItemsSource="{Binding Trucks}" DisplayMemberPath="LicensePlate"/>
-        <Button Content="Add Truck" Command="{Binding AddTruckCommand}"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- List of Trailers -->
+        <ListBox ItemsSource="{Binding Trailers}" DisplayMemberPath="Model" Margin="10,10,10,69"/>
+
+        <!-- Add Trailer Button -->
+        <Button Content="Add Trailer" Command="{Binding AddTrailerCommand}" VerticalAlignment="Top" Margin="340,382,340,0" Click="AddTrailerButton_Click" Height="30"/>
     </Grid>
 </Window>

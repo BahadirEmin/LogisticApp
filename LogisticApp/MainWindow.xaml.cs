@@ -1,24 +1,28 @@
-﻿using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using LogisticApp.Views;
+using LogisticsCRM.Views;  // Ensure you have the correct namespace for both views
 
 namespace LogisticApp
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        // Navigate to Trailer View
+        private void TrailerViewButton_Click(object sender, RoutedEventArgs e)
+        {
+            TrailerView trailerView = new TrailerView();  // This opens the TrailerView window
+            trailerView.ShowDialog();  // Shows it as a modal window
+        }
+
+        // Navigate to Truck View
+        private void TruckViewButton_Click(object sender, RoutedEventArgs e)
+        {
+            TruckView truckView = new TruckView();  // This opens the TruckView window
+            truckView.ShowDialog();  // Shows it as a modal window
         }
     }
 }
